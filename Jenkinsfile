@@ -6,6 +6,7 @@ node {
 		checkout scm
 	}
 	stage("build") {
+		sh "ls -latr"
 		sh "./mvnw clean install"
 	}
 }
