@@ -20,12 +20,12 @@ public class SampleSpringApplicationTests {
 	
 	@Test
 	public void contextLoads() {
-		assertEquals("Hodor.", responseVal);
+		assertEquals("Hodor!", responseVal);
 	}
 	
 	@Test
 	public void testResponse() {
-		assertEquals("Hodor.", response);
+		assertEquals("Hodor!", response);
 	}
 
 }

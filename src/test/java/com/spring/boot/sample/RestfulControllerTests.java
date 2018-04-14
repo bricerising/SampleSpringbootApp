@@ -18,6 +18,6 @@ public class RestfulControllerTests {
 	
 	@Test
 	public void hodorTest() {
-		assertEquals("Hodor.", restController.hodor());
+		assertEquals("Hodor!", restController.hodor());
 	}
 }
