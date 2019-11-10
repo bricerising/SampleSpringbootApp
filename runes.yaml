@@ -7,13 +7,13 @@ stages:
   - definition: DockerRune
     version: stable
     command: build
-    args: "-t docker.io/sygaldrydemos/springboot:v0.0.1 ."
+    args: "-t docker.io/sygaldrydemos/springboot:v0.0.2 ."
   publish:
   - definition: DockerRune
     version: stable
     command: push
     dockerConfigPath: ~/.docker/config-sygaldry.json
-    args: "docker.io/sygaldrydemos/springboot:v0.0.1"
+    args: "docker.io/sygaldrydemos/springboot:v0.0.2"
   deploy:
   - definition: KubectlRune
     command: apply

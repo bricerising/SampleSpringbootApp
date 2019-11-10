@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sygaldry-demo-springboot
-        image: docker.io/sygaldrydemos/springboot:v0.0.1
+        image: docker.io/sygaldrydemos/springboot:v0.0.2
         imagePullPolicy: Always
         resources:
           limits:
