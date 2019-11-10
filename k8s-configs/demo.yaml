@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sygaldry-demo-springboot
+spec:
+  selector:
+    matchLabels:
+      app: sygaldry-demo-springboot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sygaldry-demo-springboot
+    spec:
+      containers:
+      - name: sygaldry-demo-springboot
+        image: docker.io/sygaldrydemos/springboot:latest
+        resources:
+          limits:
+            memory: 512M
+            cpu: .5
+        ports:
+        - containerPort: 8080
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: sygaldry-demo-springboot
+spec:
+  type: LoadBalancer
+  selector:
+    app: sygaldry-demo-springboot
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
